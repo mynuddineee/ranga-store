@@ -43,6 +43,7 @@ body {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
   border: 1px solid cyan;
+
 }
 .product-image {
   width: 150px;
@@ -61,7 +62,7 @@ body {
   padding-right: 30px;
 }
 .fa-star{
-  padding-top: 10px;
+  padding-top: 8px;
   color: #E77C40;
 }
 .counter-text{
