@@ -20,11 +20,23 @@ const showProducts = (products) => {
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button id="details-btn" class="btn btn-danger">Details</button>
+      <div class="d-flex justify-content-center pb-3">
+                            <i class="fas fa-star ps-2"></i>
+                            <i class="fas fa-star ps-2"></i>
+                            <i class="fas fa-star ps-2"></i>
+                            <i class="fas fa-star ps-2"></i>
+                            <i class="far fa-star ps-2"></i>
+                            <p class="text-center counter-text">Satisfied Customers: 5000</p>
+                    
+                        </div>
+      </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// total added product count function
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -76,13 +88,8 @@ const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  
-    //console.log(grandTotal);
   document.getElementById("total").innerText = parseFloat(grandTotal).toFixed(2);
-  //console.log(grandTotal);
- 
- 
-};
 
+};
 
 loadProducts();
